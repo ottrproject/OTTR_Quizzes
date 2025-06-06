@@ -13,8 +13,8 @@ option_list <- list(
   optparse::make_option(
     c("--repo"),
     type = "character",
-    default = "jhudsl/OTTR_Template_Test",
-    help = "GitHub repository name, e.g. jhudsl/OTTR_Template_Test",
+    default = "ottrproject/OTTR_Template_Test",
+    help = "GitHub repository name, e.g. ottrproject/OTTR_Template_Test",
   )
 )
 
@@ -30,8 +30,10 @@ sync_file_path <- file.path(root_dir, ".github", "test-sync.yml")
 
 yaml_contents <- yaml::yaml.load_file(sync_file_path)
 
-# Switch out repo 
+# Only keep first grouping
+yaml_contents$group <- yaml_contents$group[[1]]
+
+# Switch out repo
 yaml_contents$group$repos <- opt$repo
 
 yaml::write_yaml(yaml_contents, sync_file_path)
-
