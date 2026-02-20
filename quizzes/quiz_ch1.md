@@ -3,7 +3,7 @@
 
 ## Template quiz
 
-Put any other instructions your quiz takers need to know here like: Choose the best answer.
+Put any instructions your quiz takers need to know here like: Choose the best answer.
 
 {choose-answers: 4}
 ? First question to ask goes here. (Note- you need a question mark at end like this. Just one is required if using a question mark in your question field)?
