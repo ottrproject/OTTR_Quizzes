@@ -31,7 +31,7 @@ render-website: rmd
 render-leanpub: true
 render-coursera: false
 
-## Automate the creation of Book.txt file? yes/no
+## Automate the creation of Book.txt file? true/false
 ## This is only relevant if render-leanpub is yes, otherwise it will be ignored
 make-book-txt: true
 
