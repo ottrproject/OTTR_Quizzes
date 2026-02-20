@@ -53,6 +53,7 @@ jobs:
     with:
       check_type: spelling
       error_min: 3
+    secrets:
       gh_pat: ${{ secrets.GH_PAT }}
 
   url-check:
@@ -63,6 +64,7 @@ jobs:
     with:
       check_type: urls
       error_min: 0
+    secrets:
       gh_pat: ${{ secrets.GH_PAT }}
 
   quiz-check:
@@ -73,4 +75,5 @@ jobs:
     with:
       check_type: quiz_format
       error_min: 0
+    secrets:
       gh_pat: ${{ secrets.GH_PAT }}
